@@ -1,10 +1,473 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Page</title>
-</head>
-<body>
-    <h1>Welcome to my page</h1>
-    <p>This is a test with corrected grammar and spelling. I love kphp and it's sooo much fun!</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Love❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="welcome-popup" id="welcomePopup">
+      <div class="welcome-content">
+        <div class="music-note">
+          <img src="photos/cocky.png" alt="Celebration" height="350px" />
+        </div>
+        <h2>Welcome, My Love</h2>
+        <p>
+          Turn on the music to feel the rhythm of my heart beating for you... ❤️
+        </p>
+        <button class="welcome-button" id="continueBtn">
+          Let's Begin Our Journey
+        </button>
+      </div>
+    </div>
+    <div class="good-girl-popup" id="goodGirlPopup">
+      <div class="good-girl-content">
+        <div class="celebration-emoji">
+          <img
+            src="photos/cheerful.png"
+            alt="Celebration"
+            height="150px"
+            style="left: 50%"
+          />
+        </div>
+        <h2>Good Girl!</h2>
+        <p>I knew you'd say yes! ❤️</p>
+        <p style="font-size: 1.3em; margin-top: 30px">
+          I love you forever and always 💕
+        </p>
+      </div>
+    </div>
+    <div class="no-clicked-popup" id="noClickedPopup">
+      <div class="no-clicked-content">
+        <span class="no-popup-sticker">😢</span>
+        <span class="no-popup-sticker">💔</span>
+        <span class="no-popup-sticker">😭</span>
+        <span class="no-popup-sticker">🥺</span>
+        <span class="no-popup-sticker">😔</span>
+        <span class="no-popup-sticker">💧</span>
+        <div class="sad-emoji">
+          <img src="photos/stubborn.png" alt="Sad" height="150px" />
+        </div>
+        <h2>Really? 🥺</h2>
+        <p>You're breaking my heart... but I'll wait forever for you! 💔</p>
+        <p style="font-size: 1.2em; margin-top: 20px">
+          Please reconsider... I love you so much 😢
+        </p>
+        <button class="close-no-popup" id="closeNoPopup">
+          Okay, let me think again 💭
+        </button>
+      </div>
+    </div>
+    <div class="chase-popup" id="chasePopup">
+      <div class="chase-content">
+        <span class="chase-popup-sticker">😔</span>
+        <span class="chase-popup-sticker">💔</span>
+        <span class="chase-popup-sticker">😢</span>
+        <span class="chase-popup-sticker">🥺</span>
+        <div class="tired-emoji">
+          <img src="photos/annoyed.png" alt="" height="150px" />
+        </div>
+        <h2>Really? Okay fine!! 😔</h2>
+        <p>I'll not move the No button anymore...</p>
+        <p style="font-size: 1.3em; margin-top: 20px">
+          But please, give me a chance! 💕
+        </p>
+        <button class="close-chase-popup" id="closeChasePopup">
+          Continue 💭
+        </button>
+      </div>
+    </div>
+
+    <div class="stars" id="stars"></div>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="reason-popup" id="reasonPopup">
+        <span class="popup-sticker"
+          ><img src="photos/love.png" alt="Star" height="100px"
+        /></span>
+        <span class="popup-sticker"
+          ><img src="photos/us/forever.png" alt="us" height="100px"
+        /></span>
+        <span class="popup-sticker"
+          ><img src="photos/Angel.png" alt="Heart" height="100px"
+        /></span>
+        <span class="popup-sticker"
+          ><img src="photos/blush.png" alt="Heart" height="100px"
+        /></span>
+        <span class="popup-sticker" style="font-size: 60px">🌹</span>
+        <span class="popup-sticker" style="font-size: 60px">💘</span>
+        <p id="reasonText"></p>
+        <div class="close-hint">Click anywhere to continue ✨</div>
+      </div>
+    </div>
+    <div class="music-toggle" id="musicToggle">🎵 Click to Play Music</div>
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <section class="constellation-section">
+      <div class="constellation-container">
+        <h1 class="constellation-title">Reasons Why I Love You</h1>
+        <p class="constellation-subtitle">
+          ✨ Click all the stars to unlock the journey ✨
+        </p>
+        <div id="constellationStars"></div>
+        <div class="scroll-hint" id="scrollHint">
+          <p>Click all the stars ✨</p>
+          <p style="font-size: 2em">↓</p>
+        </div>
+      </div>
+    </section>
+    <section class="timeline-section">
+      <div class="timeline-container">
+        <h2 class="timeline-title">Our Beautiful Journey Together</h2>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">The First Time</div>
+            <p class="timeline-text">
+              The moment I first saw you, the moment our uncertainties vanished.
+              The moment we both realized our connection was truly special, and
+              it would change our conversations forever.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <span class="timeline-sticker">💕</span>
+            <span class="timeline-sticker"
+              ><img src="photos/cute.png" height="110px"
+            /></span>
+            <span class="timeline-sticker"
+              ><img src="photos/cheerful.png" height="110px"
+            /></span>
+            <span class="timeline-sticker"
+              ><img src="photos/us/FavUS.png" height="110px"
+            /></span>
+            <div class="img-placeholder">
+              <img
+                src="photos/Memories/theFirst.jpeg"
+                alt=""
+                style="
+                  height: inherit;
+                  background-color: burlywood;
+                  border-radius: inherit;
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">Our First Date</div>
+            <p class="timeline-text">
+              I still remember searching the entire internet to find this place,
+              away from KPHB, with curtains and peace. From then on, it became
+              our meeting hall for every date—an unspoken tradition we follow
+              every time. Each time, I fall deeper in love with you.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <span class="timeline-sticker"
+              ><img src="photos/hotShocked.png" height="110px"
+            /></span>
+            <span class="timeline-sticker">🌹</span>
+            <span class="timeline-sticker">🥰</span>
+            <span class="timeline-sticker"
+              ><img src="photos/us/CuteUs.png" height="110px"
+            /></span>
+            <div class="img-placeholder">
+              <img
+                src="photos/Memories/TheDate.jpeg"
+                alt=""
+                style="
+                  height: inherit;
+                  background-color: burlywood;
+                  border-radius: inherit;
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">Growing Together</div>
+            <p class="timeline-text">
+              Through every high and low, you've been my constant. You've made
+              me a better person, and I'm grateful for every single day we've
+              spent together. Even when things between us weren't always
+              lovey-dovey, each time we fought, we came out stronger and more
+              connected than before.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <span class="timeline-sticker"
+              ><img src="photos/overwheled.png" height="110px"
+            /></span>
+            <span class="timeline-sticker">💫</span>
+            <span class="timeline-sticker">💝</span>
+            <span class="timeline-sticker"
+              ><img src="photos/us/forever.png" height="110px"
+            /></span>
+            <div class="img-placeholder">
+              <img
+                src="photos/Memories/OgBirthdaypic.jpeg"
+                alt=""
+                style="
+                  height: inherit;
+                  background-color: burlywood;
+                  border-radius: inherit;
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">My First Fall!</div>
+            <p class="timeline-text">
+              Every moment with you is a treasure. But oh my God, the surprise
+              you gave me on your birthday was the most beautiful gift I've ever
+              received. It still makes my stomach fill with butterflies.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <span class="timeline-sticker">💞</span>
+            <span class="timeline-sticker"
+              ><img src="photos/us/MyWifeUs.png" height="110px"
+            /></span>
+            <span class="timeline-sticker"
+              ><img src="photos/Angel.png" alt="" height="110px"
+            /></span>
+            <span class="timeline-sticker">💓</span>
+            <div class="img-placeholder">
+              <img
+                src="photos/Memories/sareeTemple.jpeg"
+                alt=""
+                style="
+                  height: inherit;
+                  background-color: burlywood;
+                  border-radius: inherit;
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">All Walls Broken 🎀</div>
+            <p class="timeline-text">
+              With time, we became closer and more comfortable. This is when we
+              reached our peak—all the walls between you and me were broken!
+            </p>
+          </div>
+          <div class="timeline-image">
+            <span class="timeline-sticker"
+              ><img src="photos/cocky.png" height="110px"
+            /></span>
+            <span class="timeline-sticker">🎀</span>
+            <span class="timeline-sticker">🦋</span>
+            <span class="timeline-sticker"
+              ><img src="photos/blush.png" height="110px"
+            /></span>
+            <div class="img-placeholder">
+              <img
+                src="photos/Memories/theWallbreak.jpg"
+                alt=""
+                style="
+                  height: inherit;
+                  background-color: burlywood;
+                  border-radius: inherit;
+                "
+              />
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">Worth Every Second 🤌🏼</div>
+            <p class="timeline-text">
+              The wait, the postponements, the long nights thinking about you,
+              and the joy of finally being with you—everything felt so worth it.
+              It felt as if I was dreaming, and you were the dream that never
+              ended.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <span class="timeline-sticker"
+              ><img src="photos/us/MyWifeUs.png" height="110px"
+            /></span>
+            <span class="timeline-sticker">🎀</span>
+            <span class="timeline-sticker">💓</span>
+            <span class="timeline-sticker"
+              ><img src="photos/us/Us.png" height="110px"
+            /></span>
+            <div class="img-placeholder">
+              <img
+                src="photos/Memories/TheBanglore.jpeg"
+                alt=""
+                style="
+                  height: inherit;
+                  background-color: burlywood;
+                  border-radius: inherit;
+                "
+              />
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">Our First Long Journey</div>
+            <p class="timeline-text">
+              My little dream of traveling a long journey with you has finally
+              come true. Every moment of our journey together has been filled
+              with joy, laughter, and unforgettable memories that I will cherish
+              forever.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <span class="timeline-sticker">💞</span>
+            <span class="timeline-sticker"
+              ><img src="photos/happy.png" alt="" height="110px"
+            /></span>
+            <span class="timeline-sticker"
+              ><img src="photos/us/MyCalm.png" alt="" height="110px"
+            /></span>
+            <span class="timeline-sticker"
+              ><img src="photos/puppy eyes.png" alt="" height="110px"
+            /></span>
+            <div class="img-placeholder">
+              <img
+                src="photos/Memories/BangloreToHyd.jpeg"
+                alt=""
+                style="
+                  height: inherit;
+                  background-color: burlywood;
+                  border-radius: inherit;
+                "
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-collage-item">
+          <div class="collage-full-width">
+            <div class="collage-header">
+              <div class="timeline-date">Forever Moments 💕</div>
+              <p class="timeline-text">
+                Every little moment with you is a treasure I hold close to my
+                heart.
+              </p>
+            </div>
+            <div class="timeline-image-collage">
+              <span class="timeline-sticker"
+                ><img src="photos/us/IamScared.png" alt="" height="110px"
+              /></span>
+              <span class="timeline-sticker"
+                ><img src="photos/us/UsBeingUs.png" alt="" height="110px"
+              /></span>
+              <span class="timeline-sticker"
+                ><img src="photos/us/forever.png" alt="" height="110px"
+              /></span>
+              <span class="timeline-sticker"
+                ><img src="photos/us/CuteUs.png" alt="" height="110px"
+              /></span>
+              <div class="img-collage">
+                <div class="collage-item">
+                  <img src="photos/Memories/TheRecent.jpeg" alt="Memory 1" />
+                </div>
+                <div class="collage-item">
+                  <img src="photos/Memories/TheCutie.jpeg" alt="Memory 2" />
+                </div>
+                <div class="collage-item">
+                  <img src="photos/Memories/TheDark.jpeg" alt="Memory 3" />
+                </div>
+                <div class="collage-item">
+                  <img src="photos/Memories/TheNight.jpeg" alt="Memory 4" />
+                </div>
+                <div class="collage-item">
+                  <img src="photos/Memories/TheTemple.jpeg" alt="Memory 5" />
+                </div>
+                <div class="collage-item">
+                  <img
+                    src="photos/Memories/ThePostBirthday.jpeg"
+                    alt="Memory 6"
+                  />
+                </div>
+                <div class="collage-item">
+                  <video
+                    src="photos/Memories/WhatsApp Video 2026-02-07 at 1.05.21 AM (online-video-cutter.com).mp4"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    style="
+                      height: inherit;
+                      width: 100%;
+                      object-fit: cover;
+                      border-radius: inherit;
+                    "
+                  ></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proposal-section">
+      <span class="proposal-sticker"
+        ><img src="photos/cute.png" alt="" height="150px"
+      /></span>
+      <span class="proposal-sticker"
+        ><img src="photos/cocky.png" alt="" height="150px"
+      /></span>
+      <span class="proposal-sticker"
+        ><img src="photos/stubborn.png" alt="" height="150px"
+      /></span>
+      <span class="proposal-sticker"
+        ><img src="photos/love.png" alt="" height="150px"
+      /></span>
+      <span class="proposal-sticker"
+        ><img src="photos/blush.png" alt="" height="150px"
+      /></span>
+      <span class="proposal-sticker"
+        ><img src="photos/cocky.png" alt="" height="150px"
+      /></span>
+      <span class="proposal-sticker"
+        ><img src="photos/us/MyWifeUs.png" alt="" height="150px"
+      /></span>
+      <span class="proposal-sticker"
+        ><img src="photos/us/SayYes.png" alt="" height="150px"
+      /></span>
+
+      <div class="proposal-container" id="proposalContainer">
+        <h2 class="proposal-title">My Forever Love</h2>
+        <p class="proposal-text">
+          You are my best friend, my soulmate, my everything. Every day with you
+          is a gift, and I want to spend the rest of my life smiling and making
+          you smile. You've already become my wife in my heart, and I want to
+          show you how much I love you by asking you this question...
+        </p>
+        <div class="proposal-question">Will you be my Valentine? 💍</div>
+        <p class="proposal-text">
+          I promise to love you, cherish you, and stand by your side through
+          everything. You complete me in ways I never knew were possible.
+        </p>
+
+        <div class="proposal-buttons">
+          <div class="no-button-boundary" id="noButtonBoundary">
+            <button class="proposal-btn yes-btn" id="yesBtn">Yes! 💕</button>
+            <button class="proposal-btn no-btn" id="noBtn">No</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <audio id="bgMusic" loop>
+      <source src="24 Movie Love BGM Loop.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="script.js"></script>
+  </body>
 </html>
